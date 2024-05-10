@@ -22,6 +22,6 @@ public class BrandManager implements BrandService {
     public List<Brand> getAll() {
         // is kurallari
 
-        return brandRepository.getAll();
+        return brandRepository.findAll();
     }
 }

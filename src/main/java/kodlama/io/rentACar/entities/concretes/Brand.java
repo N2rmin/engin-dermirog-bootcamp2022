@@ -1,9 +1,9 @@
 package kodlama.io.rentACar.entities.concretes;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 @Table(name="brands")
@@ -12,6 +12,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 public class Brand {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
-    private String names;
+
+    @Column(name="name")
+    private String name;
 }
